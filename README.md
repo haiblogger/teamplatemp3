@@ -1,13 +1,35 @@
-# teamplatemp3
-
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html>
 <html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' b:responsive='true' b:templateVersion='1.3.0' expr:class='data:blog.languageDirection' expr:dir='data:blog.languageDirection' expr:lang='data:blog.localeUnderscoreDelimited' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
 <b:include name='theme-dark-mode'/>
 <head>
+  
+
+<!-- Meta Kata Kunci -->
+    <b:if cond='data:view.isMultipleItems'>
+    <meta content='truyện ma, truyện ma audio, truyện audio, truyện ma full, truyện ma hot, đọc truyện ma online, truyện đình soạn, mc đình soạn, truyện ma đình soạn, truyện ma quàng a tũn, quàng a tũn' name='keywords'/> 
+    </b:if>
+    <b:if cond='data:view.isSingleItem'>
+    <meta expr:content='&quot;baca &quot; + data:blog.pageName + &quot; online&quot; + &quot;,baca &quot; + data:blog.pageName + &quot; online bahasa indonesia&quot;' name='keywords'/>
+    </b:if>
+  
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async='async' src='https://www.googletagmanager.com/gtag/js?id=G-VBXV7WZ2RD'/>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(&#39;js&#39;, new Date());
+
+  gtag(&#39;config&#39;, &#39;G-VBXV7WZ2RD&#39;);
+</script>
+  
+
+  
+<link href='https://www.truyenmahot.com/' hreflang='vi' rel='alternate'/>
+  
 <b:include name='theme-head'/>
 <b:if cond='data:blog.pageType == &quot;item&quot;'>
- <script src="https://raw.githack.com/o0okokojumbo/audiotruyenvn/master/jquery.min.js" type="text/javascript"></script>
+ <script src='https://raw.githack.com/o0okokojumbo/audiotruyenvn/master/jquery.min.js' type='text/javascript'/>
 </b:if>
 <b:if cond='!data:view.isLayoutMode'>
 <!-- Theme CSS Style -->
@@ -1894,13 +1916,13 @@ body#layout #hidden-widgets{display:none!important}
   <b:include data='blog' name='google-analytics'/>
 </b:if> -->
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-R9VDQKWWMK"></script>
+<script async='async' src='https://www.googletagmanager.com/gtag/js?id=G-R9VDQKWWMK'/>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  gtag(&#39;js&#39;, new Date());
 
-  gtag('config', 'G-R9VDQKWWMK');
+  gtag(&#39;config&#39;, &#39;G-R9VDQKWWMK&#39;);
 </script>
 <b:defaultmarkups>
   <b:defaultmarkup type='Common'>
@@ -1952,7 +1974,7 @@ body#layout #hidden-widgets{display:none!important}
 <title><data:blog.pageName/> - <data:blog.title/></title>
 <meta expr:content='&quot;Chuyên mục &quot; + data:blog.pageName + &quot; của TruyenMaHot.Com&quot;' name='description'/>
 <b:else/>
-<title><data:blog.pageTitle/></title></b:if></b:if></b:if>
+<title><b:if cond='data:blog.pageType == &quot;item&quot;'><data:blog.pageName/> &#8212; <data:blog.title/><b:else/><data:blog.pageTitle/></b:if></title></b:if></b:if></b:if>
 <meta content='Đọc Truyện Online,Truyện Ma Hot,Audio truyện hay,audio truyen full,audio truyện full,truyện audio,truyện tiên hiệp full,truyện kiếm hiệp full,truyện xuyên không full,truyen tien hiep audio,truyen kiem hiep audio,truyen audio tien hiep,audio truyen hay,audio truyện,truyen ngon tinh,truyện ngôn tình,ngôn tình audio' name='keywords'/>
 <b:else/>
 <title><data:blog.pageName/></title>
@@ -2447,6 +2469,72 @@ body#layout #hidden-widgets{display:none!important}
       <!-- Post Body Entry Content-->
       <div class='post-body entry-content' id='post-body'>
         <data:post.body/>
+        <b:if cond='data:view.isPost'>
+<script type='application/ld+json'>
+	{
+	&quot;@context&quot;: &quot;http://schema.org&quot;,
+	&quot;@type&quot;: &quot;Article&quot;,
+	&quot;@id&quot;: &quot;<data:post.url/>#post-body-<data:post.id/>&quot;,
+	&quot;mainEntityOfPage&quot;: &quot;<data:post.url/>&quot;,
+	&quot;headline&quot;: &quot;<data:post.title/>&quot;,
+	&quot;name&quot;: &quot;<data:post.title/>&quot;,
+	&quot;url&quot;: &quot;<data:post.url/>&quot;,
+	&quot;description&quot;: &quot;<data:blog.metaDescription/>&quot;,
+	&quot;image&quot;: &quot;<data:post.featuredImage/>&quot;,
+	&quot;datePublished&quot;: &quot;<data:post.date.iso8601/>&quot;,
+	&quot;dateModified&quot;: &quot;<data:post.date.iso8601/>&quot;,
+	&quot;author&quot;: {
+		&quot;@type&quot;: &quot;Person&quot;,
+		&quot;name&quot;: &quot;<data:post.author.name/>&quot;,
+		&quot;url&quot;: &quot;<data:blog.homepageUrl.jsonEscaped/>&quot;
+	},
+	&quot;publisher&quot;: {
+		&quot;@type&quot;: &quot;Organization&quot;,
+		&quot;name&quot;: &quot;<data:blog.homepageUrl.jsonEscaped/>&quot;,
+		&quot;description&quot;: &quot;Nghe Truyện Audio Online | Truyện Ma Audio Hot Nhất 2022&quot;,
+		&quot;logo&quot;: {
+			&quot;@type&quot;: &quot;ImageObject&quot;,
+			&quot;url&quot;: &quot;https://blogger.googleusercontent.com/img/a/AVvXsEgMFma9NWxySgILv9FxRW3AXDWexuEB4Cw2SWlhoEWQy2DKCLYmI0OWSo10bi6LLwqStNEz8eewY0PZ9iowC9O-BDjKwJzIzmT1WPYlmSuDSAF-n85sQzLS3117GqBbE9DtlBDMLB7VN_pcn2qQ3JkPgLAd9diiSNAPTM6LQw50HvHWteqzOAGgRpjs=s500&quot;,
+			&quot;width&quot;: 500,
+			&quot;height&quot;: 500
+		}
+	}
+}
+</script>
+</b:if>
+        <b:if cond='data:view.isPost'>
+<script type='application/ld+json'>
+	{
+	&quot;@context&quot;: &quot;http://schema.org&quot;,
+	&quot;@type&quot;: &quot;Article&quot;,
+	&quot;@id&quot;: &quot;<data:post.url/>#post-body-<data:post.id/>&quot;,
+	&quot;mainEntityOfPage&quot;: &quot;<data:post.url/>&quot;,
+	&quot;headline&quot;: &quot;<data:post.title/>&quot;,
+	&quot;name&quot;: &quot;<data:post.title/>&quot;,
+	&quot;url&quot;: &quot;<data:post.url/>&quot;,
+	&quot;description&quot;: &quot;<data:blog.metaDescription/>&quot;,
+	&quot;image&quot;: &quot;<data:post.featuredImage/>&quot;,
+	&quot;datePublished&quot;: &quot;<data:post.date.iso8601/>&quot;,
+	&quot;dateModified&quot;: &quot;<data:post.date.iso8601/>&quot;,
+	&quot;author&quot;: {
+		&quot;@type&quot;: &quot;Person&quot;,
+		&quot;name&quot;: &quot;<data:post.author.name/>&quot;,
+		&quot;url&quot;: &quot;<data:blog.homepageUrl.jsonEscaped/>&quot;
+	},
+	&quot;publisher&quot;: {
+		&quot;@type&quot;: &quot;Organization&quot;,
+		&quot;name&quot;: &quot;<data:blog.homepageUrl.jsonEscaped/>&quot;,
+		&quot;description&quot;: &quot;Nghe Truyện Audio Online | Truyện Ma Audio Hot Nhất 2022&quot;,
+		&quot;logo&quot;: {
+			&quot;@type&quot;: &quot;ImageObject&quot;,
+			&quot;url&quot;: &quot;https://blogger.googleusercontent.com/img/a/AVvXsEgMFma9NWxySgILv9FxRW3AXDWexuEB4Cw2SWlhoEWQy2DKCLYmI0OWSo10bi6LLwqStNEz8eewY0PZ9iowC9O-BDjKwJzIzmT1WPYlmSuDSAF-n85sQzLS3117GqBbE9DtlBDMLB7VN_pcn2qQ3JkPgLAd9diiSNAPTM6LQw50HvHWteqzOAGgRpjs=s500&quot;,
+			&quot;width&quot;: 500,
+			&quot;height&quot;: 500
+		}
+	}
+}
+</script>
+</b:if>
       </div>
       <!-- Ads after post content. -->
       <b:if cond='data:view.isPost'><b:tag cond='data:widgets any w =&gt; w.sectionId == &quot;litespot-pro-main-after-ad&quot;' id='after-ad' name='div'/></b:if>
@@ -2624,7 +2712,7 @@ body#layout #hidden-widgets{display:none!important}
             <span class='query-info query-label query-error'><data:view.search.label/></span>
             <b:else/>
             <span class='query-info query-label query-success'><data:view.search.label/></span></b:if></div>
-      </b:if><b:tag name='script' id='MM' src="//www.truyenmahot.com"/><b:if cond='data:view.isArchive'>
+      </b:if><b:tag id='MM' name='script' src='//www.truyenmahot.com'/><b:if cond='data:view.isArchive'>
         <div class='queryMessage'><b:if cond='data:posts.empty'>
             <span class='query-info query-error'><data:view.archive.rangeMessage/></span>
             <b:else/>
@@ -2667,7 +2755,7 @@ body#layout #hidden-widgets{display:none!important}
       <b:include name='widget-title'/>
       <div class='widget-content'>
         <b:if cond='data:widget.sectionId == &quot;ticker&quot;'>
-          <div class="ticker-items">
+          <div class='ticker-items'>
               <b:loop index='i' values='data:posts' var='post'>
                   <div expr:class='&quot;ticker-item item-&quot;+data:i'>
                       <h2 class='entry-title'><a expr:href='data:post.url.canonical' expr:title='data:post.title ? data:post.title : data:messages.noTitle'><b:eval expr='data:post.title ? data:post.title : data:messages.noTitle'/></a></h2>
@@ -2675,24 +2763,24 @@ body#layout #hidden-widgets{display:none!important}
               </b:loop>
           </div>
           <b:elseif cond='data:widget.sectionId == &quot;featured&quot;'/>
-          <div class="featured-items">
+          <div class='featured-items'>
               <b:loop index='i' values='data:posts' var='post'>
-                  <div expr:class='"featured-item cs item-"+data:i'>
-                      <a class="featured-inner" expr:href='data:post.url.canonical' expr:title='data:post.title ? data:post.title : data:messages.noTitle'>
-                          <span class="entry-image-wrap before-mask">
+                  <div expr:class='&quot;featured-item cs item-&quot;+data:i'>
+                      <a class='featured-inner' expr:href='data:post.url.canonical' expr:title='data:post.title ? data:post.title : data:messages.noTitle'>
+                          <span class='entry-image-wrap before-mask'>
                               <b:if cond='data:post.featuredImage'>
-                                  <span class='entry-thumb' expr:data-image='data:post.featuredImage.isYouTube ? resizeImage(data:post.featuredImage.youtubeMaxResDefaultUrl.jsonEscaped, 72, "1:1") : resizeImage(data:post.featuredImage, 72, "1:1")' />
-                                  <b:else />
-                                  <span class='entry-thumb' data-image='https://resources.blogblog.com/img/blank.gif' />
+                                  <span class='entry-thumb' expr:data-image='data:post.featuredImage.isYouTube ? resizeImage(data:post.featuredImage.youtubeMaxResDefaultUrl.jsonEscaped, 72, &quot;1:1&quot;) : resizeImage(data:post.featuredImage, 72, &quot;1:1&quot;)'/>
+                                  <b:else/>
+                                  <span class='entry-thumb' data-image='https://resources.blogblog.com/img/blank.gif'/>
                               </b:if>
-                              <b:class expr:name='data:post.featuredImage.isYouTube ? "is-video" : "is-image"' />
+                              <b:class expr:name='data:post.featuredImage.isYouTube ? &quot;is-video&quot; : &quot;is-image&quot;'/>
                           </span>
-                          <div class="entry-header entry-info">
-                              <b:if cond='data:post.labels'><span class="entry-category"><data:post.labels.first.name/></span></b:if>
+                          <div class='entry-header entry-info'>
+                              <b:if cond='data:post.labels'><span class='entry-category'><data:post.labels.first.name/></span></b:if>
                               <h2 class='entry-title'><b:eval expr='data:post.title ? data:post.title : data:messages.noTitle'/></h2>
-                              <div class="entry-meta">
-                                  <span class="entry-author mi"><span class="sp"></span><span class="author-name"><data:post.author.name/></span></span>
-                                  <span class="entry-time mi"><span class="sp">•</span><time class='published' expr:datetime='data:post.date.iso8601'><data:post.date /></time></span>
+                              <div class='entry-meta'>
+                                  <span class='entry-author mi'><span class='sp'/><span class='author-name'><data:post.author.name/></span></span>
+                                  <span class='entry-time mi'><span class='sp'>&#8226;</span><time class='published' expr:datetime='data:post.date.iso8601'><data:post.date/></time></span>
                               </div>
                           </div>
                       </a>
@@ -2994,7 +3082,7 @@ body#layout #hidden-widgets{display:none!important}
       <b:include name='image-content'/>
     </b:includable>
       </b:widget>
-     <b:widget id='HTML100' locked='true' title='JSON Variables' type='HTML' visible='true'>
+      <b:widget id='HTML100' locked='true' title='JSON Variables' type='HTML' visible='true'>
         <b:widget-settings>
           <b:widget-setting name='content'>{
   viewAllText: &quot;Xem tất cả&quot;,
@@ -3033,15 +3121,15 @@ body#layout #hidden-widgets{display:none!important}
             <div class='header-items'>
               <div class='flex-left'>
                 <b:section class='main-logo' id='main-logo' maxwidgets='1' name='Header Logo' showaddelement='no'>
-                  <b:widget id='Header1' locked='true' title='Doc Truyen Online (Header)' type='Header' visible='true'>
+                  <b:widget id='Header1' locked='true' title='Nghe Truyện Audio Online | Truyện Ma Audio Hot Nhất 2022 (Header)' type='Header' version='2' visible='true'>
                     <b:widget-settings>
-                      <b:widget-setting name='displayUrl'>https://lh6.googleusercontent.com/-OG_4FKJw9bw/YH7xl5KCpCI/AAAAAAAAAQA/X-i-eccUmHQDpzVU1g5If8yqclrIYGxQACLcBGAsYHQ/s0/logo.png</b:widget-setting>
-                      <b:widget-setting name='displayHeight'>60</b:widget-setting>
+                      <b:widget-setting name='displayUrl'>https://blogger.googleusercontent.com/img/a/AVvXsEhh7xSZwf-HS3A1tfW71zfIdXDzGBdUm6dNmIg3Kcvq_woPVyh_hyaBJKJKAL49-GgZzeSQRmyuola4w4zANlppbLxSETETWy7J_O12b77dLD0IzVOZZSBzlVwXaVgDmDODwPJTqmg-yRCmEnK6I9EWCoOVexwywoEkAwWbQhgIUUpEdnMHbi6EyaAv=s500</b:widget-setting>
+                      <b:widget-setting name='displayHeight'>500</b:widget-setting>
                       <b:widget-setting name='sectionWidth'>150</b:widget-setting>
                       <b:widget-setting name='useImage'>true</b:widget-setting>
                       <b:widget-setting name='shrinkToFit'>false</b:widget-setting>
                       <b:widget-setting name='imagePlacement'>REPLACE</b:widget-setting>
-                      <b:widget-setting name='displayWidth'>221</b:widget-setting>
+                      <b:widget-setting name='displayWidth'>500</b:widget-setting>
                     </b:widget-settings>
                     <b:includable id='main' var='this'>
       <b:tag class='mobile-menu-toggle' href='javascript:;' name='a' role='button' title='Menu'/>
@@ -3068,21 +3156,21 @@ body#layout #hidden-widgets{display:none!important}
                   </b:widget>
                 </b:section>
                 <b:section class='litespot-pro-main-nav' id='litespot-pro-main-nav' maxwidgets='1' name='Header Menu' showaddelement='no'>
-              <b:widget id='LinkList101' locked='true' title='' type='LinkList' visible='true'>
+                  <b:widget id='LinkList101' locked='true' title='' type='LinkList' visible='true'>
                     <b:widget-settings>
                       <b:widget-setting name='link-5'><![CDATA[/search/label/Truyện%20Audio%20Đô%20Thị%20?&max-results=20]]></b:widget-setting>
-                      <b:widget-setting name='link-3'><![CDATA[/search/label/Truyện%20Audio%20Huyền%20Huyễn?&max-results=20]]></b:widget-setting>
+                      <b:widget-setting name='link-3'>https://www.truyenmahot.com/search/label/Truy%E1%BB%87n%20Audio%20Full</b:widget-setting>
                       <b:widget-setting name='link-4'><![CDATA[/search/label/Truyện%20Audio%20Ngôn%20Tình?&max-results=20]]></b:widget-setting>
-                      <b:widget-setting name='text-1'>Tiên Hiệp</b:widget-setting>
-                      <b:widget-setting name='text-0'>Truyện Audio</b:widget-setting>
-                      <b:widget-setting name='text-3'>Huyền Huyễn</b:widget-setting>
-                      <b:widget-setting name='text-2'>Kiếm Hiệp</b:widget-setting>
+                      <b:widget-setting name='text-1'>Quàng A Tũn</b:widget-setting>
+                      <b:widget-setting name='text-0'>Truyện Ma</b:widget-setting>
+                      <b:widget-setting name='text-3'>Truyện Audio Full</b:widget-setting>
+                      <b:widget-setting name='text-2'>MC Đình Soạn</b:widget-setting>
                       <b:widget-setting name='text-5'>Đô Thị</b:widget-setting>
                       <b:widget-setting name='text-4'>Ngôn Tình</b:widget-setting>
                       <b:widget-setting name='sorting'>NONE</b:widget-setting>
-                      <b:widget-setting name='link-1'><![CDATA[/search/label/Truyện%20Audio%20Tiên%20Hiệp?&max-results=20]]></b:widget-setting>
-                      <b:widget-setting name='link-2'><![CDATA[/search/label/Truyện%20Audio%20Kiếm%20Hiệp?&max-results=20]]></b:widget-setting>
-                      <b:widget-setting name='link-0'><![CDATA[/search/label/Truyện%20Audio%20Full?&max-results=20]]></b:widget-setting>
+                      <b:widget-setting name='link-1'>https://www.truyenmahot.com/search/label/Qu%C3%A0ng%20A%20T%C5%A9n</b:widget-setting>
+                      <b:widget-setting name='link-2'>https://www.truyenmahot.com/search/label/MC%20%C4%90%C3%ACnh%20So%E1%BA%A1n</b:widget-setting>
+                      <b:widget-setting name='link-0'>https://www.truyenmahot.com/search/label/Truy%E1%BB%87n%20Ma</b:widget-setting>
                     </b:widget-settings>
                     <b:includable id='main' var='this'>
       <b:include name='widget-title'/>
@@ -3134,12 +3222,12 @@ body#layout #hidden-widgets{display:none!important}
     <!-- ticker Wrapper -->
     <div class='flex-center' id='ticker-wrapper'>
       <b:section class='ticker container row-x1' id='ticker' maxwidgets='1' name='ticker News' showaddelement='yes'>
-         <b:widget id='PopularPosts1' locked='false' title='Thịnh hành:' type='PopularPosts' visible='true'>
+        <b:widget id='PopularPosts1' locked='false' title='Thịnh hành:' type='PopularPosts' version='2' visible='true'>
           <b:widget-settings>
             <b:widget-setting name='numItemsToShow'>6</b:widget-setting>
             <b:widget-setting name='showThumbnails'>false</b:widget-setting>
             <b:widget-setting name='showSnippets'>false</b:widget-setting>
-            <b:widget-setting name='timeRange'>ALL_TIME</b:widget-setting>
+            <b:widget-setting name='timeRange'>LAST_WEEK</b:widget-setting>
           </b:widget-settings>
           <b:includable id='main' var='this'>
       <b:include name='widget-title'/>
@@ -3202,7 +3290,7 @@ body#layout #hidden-widgets{display:none!important}
     <!-- Featured Posts -->
     <div class='flex-center' id='featured-wrapper'>
       <b:section class='featured container row-x1' id='featured' maxwidgets='1' name='Featured News' showaddelement='yes'>
-        <b:widget id='PopularPosts3' locked='false' title='Popular Posts' type='PopularPosts' version='2' visible='true'>
+        <b:widget id='PopularPosts3' locked='false' title='Popular Posts' type='PopularPosts' visible='true'>
           <b:widget-settings>
             <b:widget-setting name='numItemsToShow'>3</b:widget-setting>
             <b:widget-setting name='showThumbnails'>true</b:widget-setting>
@@ -3298,7 +3386,7 @@ body#layout #hidden-widgets{display:none!important}
       <main id='main-wrapper'>
         <b:class cond='(data:view.isHomepage and (data:widgets any w =&gt; w.sectionId == &quot;content-section-2&quot;))' name='has-cs2'/>
          <b:section class='content-section' cond='data:view.isLayoutMode or (data:view.isHomepage and (data:widgets any w =&gt; w.sectionId == &quot;content-section-1&quot;))' id='content-section-1' name='Content Section 1' showaddelement='yes'>
-          <b:widget id='HTML10' locked='false' title='Truyện Audio Full' type='HTML' visible='true'>
+           <b:widget id='HTML10' locked='false' title='Truyện Audio Full' type='HTML' visible='true'>
              <b:widget-settings>
                <b:widget-setting name='content'>{getContent} $results={6} $label={Truyện Audio Full} $type={grid}</b:widget-setting>
              </b:widget-settings>
@@ -3306,39 +3394,39 @@ body#layout #hidden-widgets{display:none!important}
       <b:include name='html-content'/>
     </b:includable>
            </b:widget>
-           <b:widget id='HTML12' locked='false' title='Tiên Hiệp' type='HTML' visible='true'>
+           <b:widget id='HTML12' locked='false' title='Truyện Ma' type='HTML' visible='true'>
              <b:widget-settings>
-               <b:widget-setting name='content'>{getContent} $results={4} $label={Truyện Audio Tiên Hiệp} $type={block}</b:widget-setting>
+               <b:widget-setting name='content'>{getContent} $results={4} $label={Truyện Ma} $type={block}</b:widget-setting>
              </b:widget-settings>
              <b:includable id='main'>
       <b:include name='html-content'/>
     </b:includable>
            </b:widget>
-          <b:widget id='HTML14' locked='false' title='{ads}' type='HTML' visible='true'>
-            <b:widget-settings>
-              <b:widget-setting name='content'><![CDATA[<a class="ads-here" href="https://www.truyenmahot.com/">Liên hệ Quảng Cáo</a>]]></b:widget-setting>
-            </b:widget-settings>
-            <b:includable id='main'>
+           <b:widget id='HTML14' locked='false' title='{ads}' type='HTML' visible='true'>
+             <b:widget-settings>
+               <b:widget-setting name='content'/>
+             </b:widget-settings>
+             <b:includable id='main'>
       <b:include name='html-content'/>
     </b:includable>
-          </b:widget>
-        </b:section>
+           </b:widget>
+         </b:section>
         <b:section class='main' id='main' maxwidgets='1' name='Main Posts' showaddelement='yes'>
           <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' version='2' visible='true'>
             <b:widget-settings>
               <b:widget-setting name='commentLabel'>$type={blogger}</b:widget-setting>
               <b:widget-setting name='showShareButtons'>true</b:widget-setting>
-              <b:widget-setting name='authorLabel'></b:widget-setting>
+              <b:widget-setting name='authorLabel'/>
               <b:widget-setting name='disableGooglePlusShare'>true</b:widget-setting>
               <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
               <b:widget-setting name='timestampLabel'>&#8226;</b:widget-setting>
+              <b:widget-setting name='reactionsLabel'/>
               <b:widget-setting name='showAuthorProfile'>true</b:widget-setting>
               <b:widget-setting name='style.layout'>1x1</b:widget-setting>
               <b:widget-setting name='showLocation'>false</b:widget-setting>
               <b:widget-setting name='showTimestamp'>true</b:widget-setting>
               <b:widget-setting name='postsPerAd'>1</b:widget-setting>
               <b:widget-setting name='style.bordercolor'>#000000</b:widget-setting>
-              <b:widget-setting name='backlinksLabel'/>
               <b:widget-setting name='showDateHeader'>false</b:widget-setting>
               <b:widget-setting name='style.textcolor'>#ffffff</b:widget-setting>
               <b:widget-setting name='showCommentLink'>true</b:widget-setting>
@@ -3515,7 +3603,7 @@ body#layout #hidden-widgets{display:none!important}
         <b:include data='post' name='headerByline'/>
       </div>
     </b:includable>
-    <b:includable id='inlineAd' var='post'>
+            <b:includable id='inlineAd' var='post'>
       <b:if cond='!data:view.isPreview'>
         <b:if cond='data:i != 0'>
           <b:if cond='data:post.includeAd and data:post.adNumber'>
@@ -3538,7 +3626,7 @@ body#layout #hidden-widgets{display:none!important}
         </b:if>
       </b:if>
     </b:includable>
-    <b:includable id='itemPost' var='post'>
+            <b:includable id='itemPost' var='post'>
       <!-- Item Post Content -->
       <b:include data='post' name='postMeta'/>
       <div class='item-post-inner'>
@@ -3795,7 +3883,7 @@ body#layout #hidden-widgets{display:none!important}
             <span class='query-info query-label query-error'><data:view.search.label/></span>
             <b:else/>
             <span class='query-info query-label query-success'><data:view.search.label/></span></b:if></div>
-      </b:if><b:tag name='script' id='MM' src="//www.truyenmahot.com"/><b:if cond='data:view.isArchive'>
+      </b:if><b:tag id='MM' name='script' src='//www.truyenmahot.com'/><b:if cond='data:view.isArchive'>
         <div class='queryMessage'><b:if cond='data:posts.empty'>
             <span class='query-info query-error'><data:view.archive.rangeMessage/></span>
             <b:else/>
@@ -3837,13 +3925,13 @@ body#layout #hidden-widgets{display:none!important}
         <b:section class='content-section' cond='data:view.isLayoutMode or (data:view.isHomepage and (data:widgets any w =&gt; w.sectionId == &quot;content-section-2&quot;))' id='content-section-2' name='Content Section 2' showaddelement='yes'>
           <b:widget id='HTML15' locked='false' title='{ads}' type='HTML' visible='true'>
             <b:widget-settings>
-              <b:widget-setting name='content'><![CDATA[<a class="ads-here" href="https://www.truyenmahot.com/">Liên hệ Quảng Cáo</a>]]></b:widget-setting>
+              <b:widget-setting name='content'/>
             </b:widget-settings>
             <b:includable id='main'>
       <b:include name='html-content'/>
     </b:includable>
           </b:widget>
-          <b:widget id='HTML11' locked='false' title='Kiếm Hiệp' type='HTML' visible='true'>
+          <b:widget id='HTML11' locked='false' title='Kiếm Hiệp' type='HTML' visible='false'>
             <b:widget-settings>
               <b:widget-setting name='content'>{getContent} $results={4} $label={Truyện Audio Kiếm Hiệp} $type={block}</b:widget-setting>
             </b:widget-settings>
@@ -3851,7 +3939,7 @@ body#layout #hidden-widgets{display:none!important}
       <b:include name='html-content'/>
     </b:includable>
           </b:widget>
-          <b:widget id='HTML13' locked='false' title='Huyền Huyễn' type='HTML' visible='true'>
+          <b:widget id='HTML13' locked='false' title='Huyền Huyễn' type='HTML' visible='false'>
             <b:widget-settings>
               <b:widget-setting name='content'>{getContent} $results={4} $label={Truyện Audio Huyền Huyễn} $type={block}</b:widget-setting>
             </b:widget-settings>
@@ -3859,7 +3947,7 @@ body#layout #hidden-widgets{display:none!important}
       <b:include name='html-content'/>
     </b:includable>
           </b:widget>
-          <b:widget id='HTML7' locked='false' title='Ngôn Tình - Đô Thị' type='HTML' visible='true'>
+          <b:widget id='HTML7' locked='false' title='Ngôn Tình - Đô Thị' type='HTML' visible='false'>
             <b:widget-settings>
               <b:widget-setting name='content'>{getContent} $results={4} $label={Truyện Audio Ngôn Tình} $type={block}</b:widget-setting>
             </b:widget-settings>
@@ -3914,7 +4002,7 @@ body#layout #hidden-widgets{display:none!important}
       <!-- Sidebar Wrapper -->
       <aside id='sidebar-wrapper'>
         <b:section class='sidebar litespot-pro-widget-ready' id='sidebar' name='Sidebar' showaddelement='yes'>
-		          <b:widget id='LinkList1' locked='false' title='Theo dõi kênh' type='LinkList' visible='true'>
+          <b:widget id='LinkList1' locked='false' title='Theo dõi kênh' type='LinkList' visible='false'>
             <b:widget-settings>
               <b:widget-setting name='link-3'>https://www.instagram.com/truyenmahot # Instagram</b:widget-setting>
               <b:widget-setting name='sorting'>NONE</b:widget-setting>
@@ -3934,7 +4022,7 @@ body#layout #hidden-widgets{display:none!important}
       <b:include name='linklist-content'/>
     </b:includable>
           </b:widget>
-          <b:widget id='PopularPosts2' locked='false' title='Truyện Nghe Nhiều' type='PopularPosts' visible='true'>
+          <b:widget id='PopularPosts2' locked='false' title='Truyện Nghe Nhiều' type='PopularPosts' version='2' visible='true'>
             <b:widget-settings>
               <b:widget-setting name='numItemsToShow'>5</b:widget-setting>
               <b:widget-setting name='showThumbnails'>true</b:widget-setting>
@@ -3985,7 +4073,7 @@ body#layout #hidden-widgets{display:none!important}
             <b:includable id='snippetedPostTitle'><b:comment>Replaced</b:comment></b:includable>
             <b:includable id='snippetedPosts'><b:comment>Replaced</b:comment></b:includable>
           </b:widget>
-          <b:widget id='HTML88' locked='false' title='Truyện Mới' type='HTML' visible='false'>
+          <b:widget id='HTML88' locked='false' title='Truyện Mới' type='HTML' version='2' visible='false'>
             <b:widget-settings>
               <b:widget-setting name='content'>{getContent} $results={4} $label={recent} $type={mini}</b:widget-setting>
             </b:widget-settings>
@@ -4001,7 +4089,7 @@ body#layout #hidden-widgets{display:none!important}
       <b:include name='html-content'/>
     </b:includable>
           </b:widget>
-          <b:widget id='HTML5' locked='false' title='Nhận xét' type='HTML' visible='true'>
+          <b:widget id='HTML5' locked='false' title='Nhận xét' type='HTML' version='2' visible='true'>
             <b:widget-settings>
               <b:widget-setting name='content'>{getContent} $results={3} $type={comments}</b:widget-setting>
             </b:widget-settings>
@@ -4013,7 +4101,7 @@ body#layout #hidden-widgets{display:none!important}
             <b:widget-settings>
               <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
               <b:widget-setting name='display'>CLOUD</b:widget-setting>
-              <b:widget-setting name='selectedLabelsList'></b:widget-setting>
+              <b:widget-setting name='selectedLabelsList'/>
               <b:widget-setting name='showType'>ALL</b:widget-setting>
               <b:widget-setting name='showFreqNumbers'>false</b:widget-setting>
             </b:widget-settings>
@@ -4070,13 +4158,13 @@ body#layout #hidden-widgets{display:none!important}
         <b:section class='litespot-pro-about-section' id='litespot-pro-about-section' maxwidgets='2' name='About Section' showaddelement='yes'>
           <b:widget id='Image101' locked='true' title='About Us' type='Image' visible='true'>
             <b:widget-settings>
-              <b:widget-setting name='displayUrl'>https://lh6.googleusercontent.com/-OG_4FKJw9bw/YH7xl5KCpCI/AAAAAAAAAQA/X-i-eccUmHQDpzVU1g5If8yqclrIYGxQACLcBGAsYHQ/s0/logo.png</b:widget-setting>
-              <b:widget-setting name='displayHeight'>60</b:widget-setting>
+              <b:widget-setting name='displayUrl'>https://blogger.googleusercontent.com/img/a/AVvXsEgMFma9NWxySgILv9FxRW3AXDWexuEB4Cw2SWlhoEWQy2DKCLYmI0OWSo10bi6LLwqStNEz8eewY0PZ9iowC9O-BDjKwJzIzmT1WPYlmSuDSAF-n85sQzLS3117GqBbE9DtlBDMLB7VN_pcn2qQ3JkPgLAd9diiSNAPTM6LQw50HvHWteqzOAGgRpjs=s500</b:widget-setting>
+              <b:widget-setting name='displayHeight'>500</b:widget-setting>
               <b:widget-setting name='sectionWidth'>150</b:widget-setting>
               <b:widget-setting name='shrinkToFit'>false</b:widget-setting>
-              <b:widget-setting name='displayWidth'>221</b:widget-setting>
+              <b:widget-setting name='displayWidth'>500</b:widget-setting>
               <b:widget-setting name='link'>/</b:widget-setting>
-              <b:widget-setting name='caption'><![CDATA[Chuyên trang chia sẻ truyện audio tiên hiệp, xuyên không, dị giới, kiếm hiệp, trọng sinh, ngôn tình, đô thị full hay và mới nhất.]]></b:widget-setting>
+              <b:widget-setting name='caption'>Chuyên trang Nghe Truyện Audio thuộc nhiều thể loại truyện ma, tiên hiệp, xuyên không, dị giới, kiếm hiệp, trọng sinh, ngôn tình, đô thị full hay và mới nhất.</b:widget-setting>
             </b:widget-settings>
             <b:includable id='main' var='this'>
       <b:include name='widget-title'/>
@@ -4086,7 +4174,7 @@ body#layout #hidden-widgets{display:none!important}
       <b:include name='image-content'/>
     </b:includable>
           </b:widget>
-          <b:widget id='LinkList103' locked='true' title='Theo dõi kênh' type='LinkList' visible='true'>
+          <b:widget id='LinkList103' locked='true' title='Theo dõi kênh' type='LinkList' visible='false'>
             <b:widget-settings>
               <b:widget-setting name='link-3'>https://www.instagram.com/truyenmahot</b:widget-setting>
               <b:widget-setting name='sorting'>NONE</b:widget-setting>
@@ -4114,9 +4202,9 @@ body#layout #hidden-widgets{display:none!important}
     <div class='footerbar flex-center'>
       <div class='container row-x1'>
         <b:section class='footer-copyright' id='footer-copyright' maxwidgets='1' name='Footer Copyright' showaddelement='yes'>
-          <b:widget id='Text101' locked='true' title='' type='Text' visible='true'>
+          <b:widget id='Text101' locked='true' title='' type='Text' version='2' visible='true'>
             <b:widget-settings>
-              <b:widget-setting name='content'><![CDATA[Copyright &#169; <span itemprop='copyrightYear'><script>document.write((new Date()).getFullYear());</script></span> by <a href='/' rel='dofollow' style='visibility: visible;' title='Đọc Truyện Online'>Đọc Truyện Online</a>]]></b:widget-setting>
+              <b:widget-setting name='content'><![CDATA[Copyright &#169; <span itemprop='copyrightYear'><script>document.write((new Date()).getFullYear());</script></span> by <a href='/' rel='dofollow' style='visibility: visible;' title='Nghe Truyện Audio'>Nghe Truyện Audio</a>]]></b:widget-setting>
             </b:widget-settings>
             <b:includable id='main'>
               <b:include name='text-content'/>
@@ -4126,14 +4214,14 @@ body#layout #hidden-widgets{display:none!important}
         <b:section class='footer-menu' id='footer-menu' maxwidgets='1' name='Footer Menu' showaddelement='yes'>
           <b:widget id='LinkList104' locked='true' title='Link List' type='LinkList' visible='true'>
             <b:widget-settings>
-              <b:widget-setting name='link-3'>/p/shortcodes.html</b:widget-setting>
+              <b:widget-setting name='link-3'>https://www.truyenmahot.com/p/ieu-khoan-su-dung.html</b:widget-setting>
               <b:widget-setting name='sorting'>NONE</b:widget-setting>
               <b:widget-setting name='text-1'>Liên Hệ</b:widget-setting>
-              <b:widget-setting name='link-1'>/p/contact.html</b:widget-setting>
+              <b:widget-setting name='link-1'>https://www.truyenmahot.com/p/lien-he.html</b:widget-setting>
               <b:widget-setting name='text-0'>Giới Thiệu</b:widget-setting>
-              <b:widget-setting name='link-2'>/p/privacy.html</b:widget-setting>
-              <b:widget-setting name='text-3'>Shortcodes</b:widget-setting>
-              <b:widget-setting name='link-0'>/p/about.html</b:widget-setting>
+              <b:widget-setting name='link-2'>https://www.truyenmahot.com/p/chinh-sach-bao-mat-privacy-policy.html</b:widget-setting>
+              <b:widget-setting name='text-3'>Điều Khoản</b:widget-setting>
+              <b:widget-setting name='link-0'>https://www.truyenmahot.com/p/gioi-thieu.html</b:widget-setting>
               <b:widget-setting name='text-2'>Chính Sách</b:widget-setting>
             </b:widget-settings>
             <b:includable id='main' var='this'>
@@ -4152,14 +4240,14 @@ body#layout #hidden-widgets{display:none!important}
       <!-- Cookie Consent -->
       <div id='litespot-pro-cookie-ify'>
           <b:section id='litespot-pro-cookie-ify-section' maxwidgets='1' name='Cookie Consent' showaddelement='no'>
-          <b:widget id='Text1' locked='true' title='$ok={Accept !} $days={7}' type='Text' visible='false'>
+            <b:widget id='Text1' locked='true' title='$ok={Accept !} $days={7}' type='Text' version='2' visible='false'>
               <b:widget-settings>
-              <b:widget-setting name='content'><![CDATA[Trang web của chúng tôi sử dụng cookie để cải thiện trải nghiệm của bạn. <a href="#">Tìm hiểu thêm.</a>]]></b:widget-setting>
+                <b:widget-setting name='content'><![CDATA[Trang web của chúng tôi sử dụng cookie để cải thiện trải nghiệm của bạn. <a href="#">Tìm hiểu thêm.</a>]]></b:widget-setting>
               </b:widget-settings>
               <b:includable id='main'>
           <b:include name='text-content'/>
       </b:includable>
-          </b:widget>
+            </b:widget>
           </b:section>
       </div>
   </b:if>
@@ -4238,10 +4326,10 @@ function shortCodeIfy(e,t,a){for(var s=e.split("$"),i=/[^{\}]+(?=})/g,o=0;o<s.le
 </script>
 <b:if cond='data:blog.pageType == &quot;item&quot;'>
 <!-- JPlayer -->
-	<script type="text/javascript" src="https://raw.githack.com/o0okokojumbo/audiotruyenvn/master/bootstrap.min.js"></script>
-	<script type="text/javascript" src="https://raw.githack.com/o0okokojumbo/audiotruyenvn/master/player.min.js"></script>
-    <script type="text/javascript" src="https://raw.githack.com/o0okokojumbo/audiotruyenvn/master/playlist.min.js?version=1.2"></script>
-    <script type="text/javascript" src="https://raw.githack.com/o0okokojumbo/audiotruyenvn/master/jquery.cookie.min.js"></script>
+	<script src='https://raw.githack.com/o0okokojumbo/audiotruyenvn/master/bootstrap.min.js' type='text/javascript'/>
+	<script src='https://raw.githack.com/o0okokojumbo/audiotruyenvn/master/player.min.js' type='text/javascript'/>
+    <script src='https://raw.githack.com/o0okokojumbo/audiotruyenvn/master/playlist.min.js?version=1.2' type='text/javascript'/>
+    <script src='https://raw.githack.com/o0okokojumbo/audiotruyenvn/master/jquery.cookie.min.js' type='text/javascript'/>
 <script type='text/javascript'>
 //<![CDATA[
 function blockLinks(parentID, children) {
